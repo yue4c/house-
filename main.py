@@ -1,21 +1,21 @@
 import tkinter as tk
 
 root = tk.Tk()
-root.title("House")
-root.geometry("600x600")
+root.title("Yues home")
+root.geometry("700x600")
 
-canvas = tk.Canvas(root, width=600, height=600, bg="white")
+canvas = tk.Canvas(root, width=700, height=600, bg="white")
 canvas.pack()
 
-# 🟨 House body - Butter Yellow
+# Main house body
 canvas.create_rectangle(
     150, 250, 450, 500,
-    fill="#F6E3A1",
+    fill="#F6E3A1",   # butter yellow
     outline="black",
     width=3
 )
 
-# 🔺 Roof - Red
+# Main house roof
 canvas.create_polygon(
     100, 250,
     300, 80,
@@ -25,31 +25,27 @@ canvas.create_polygon(
     width=3
 )
 
-# 🪟 Left window
+# Left window
 canvas.create_rectangle(
     190, 300, 250, 360,
     fill="lightblue",
     outline="black",
     width=3
 )
-
-# Left window lines
 canvas.create_line(220, 300, 220, 360, width=2)
 canvas.create_line(190, 330, 250, 330, width=2)
 
-# 🪟 Right window
+# Right window
 canvas.create_rectangle(
     350, 300, 410, 360,
     fill="lightblue",
     outline="black",
     width=3
 )
-
-# Right window lines
 canvas.create_line(380, 300, 380, 360, width=2)
 canvas.create_line(350, 330, 410, 330, width=2)
 
-# 🚪 Door
+# Door
 canvas.create_rectangle(
     270, 390, 330, 500,
     fill="brown",
@@ -61,6 +57,39 @@ canvas.create_rectangle(
 canvas.create_oval(
     315, 440, 325, 450,
     fill="yellow",
+    outline="black"
+)
+
+# Sun
+canvas.create_oval(
+    520, 50, 600, 130,
+    fill="yellow",
+    outline="orange",
+    width=3
+)
+
+# Dog house body
+canvas.create_rectangle(
+    520, 400, 620, 500,
+    fill="#D2B48C",
+    outline="black",
+    width=3
+)
+
+# Dog house roof
+canvas.create_polygon(
+    500, 400,
+    570, 340,
+    640, 400,
+    fill="red",
+    outline="black",
+    width=3
+)
+
+# Dog house entrance
+canvas.create_oval(
+    550, 440, 590, 500,
+    fill="black",
     outline="black"
 )
 
